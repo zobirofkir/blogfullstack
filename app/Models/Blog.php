@@ -36,6 +36,11 @@ class Blog extends Model
         return $this->belongsTo(Tag::class);
     }
 
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
     protected static function boot()
     {
         parent::boot();
