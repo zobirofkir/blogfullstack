@@ -2,13 +2,13 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\UserResource\Pages;
-use App\Filament\Resources\UserResource\RelationManagers;
-use App\Models\User;
+use App\Filament\Resources\CategoryResource\Pages;
+use App\Filament\Resources\CategoryResource\RelationManagers;
+use App\Models\Category;
 use Filament\Forms;
-use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Hidden;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -20,54 +20,40 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Auth;
 
-class UserResource extends Resource
+class CategoryResource extends Resource
 {
-    protected static ?string $model = User::class;
+    protected static ?string $model = Category::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?string $navigationGroup = 'Users';
+    protected static ?string $navigationGroup = 'Categories';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 TextInput::make("name")->required(),
-                TextInput::make("email")->required()->email(),
-                TextInput::make("password")->password()->required()->minLength(8),
+                Textarea::make("description")->required(),
                 FileUpload::make("image")
                             ->required()
                             ->preserveFilenames()
                             ->disk('public')
-                            ->directory('image'),
-
-                Select::make("is_admin")
-                            ->label('Role')
-                            ->options([
-                                'admin' => 'Admin',
-                                'user' => 'User'
-                            ])
-                            ->default('user')
-                            ->required(),
-
-                Checkbox::make("is_active")->label('Is Active')
+                            ->directory('category'),
+                Hidden::make('user_id')
+                            ->default(Auth::id()),
             ])->columns(1);
     }
 
     public static function table(Table $table): Table
     {
         return $table
-        ->query(User::where('id', '!=', Auth::id()))
             ->columns([
                 ImageColumn::make('image')
-                        ->label('Image')
-                        ->disk('public')
-                        ->width(50)
-                        ->height(50),
+                            ->label('Image')
+                            ->disk('public')
+                            ->width(50)
+                            ->height(50),
                 TextColumn::make('name'),
-                TextColumn::make('email'),
-                TextColumn::make('is_admin')->label('Role'),
-                TextColumn::make('is_active')->label('Is Active'),
-                TextColumn::make('created_at')->dateTime(),
+                TextColumn::make('description'),
             ])
             ->filters([
                 //
@@ -92,9 +78,9 @@ class UserResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListUsers::route('/'),
-            'create' => Pages\CreateUser::route('/create'),
-            'edit' => Pages\EditUser::route('/{record}/edit'),
+            'index' => Pages\ListCategories::route('/'),
+            'create' => Pages\CreateCategory::route('/create'),
+            'edit' => Pages\EditCategory::route('/{record}/edit'),
         ];
     }
 }

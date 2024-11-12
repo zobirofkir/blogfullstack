@@ -8,12 +8,18 @@ use Illuminate\Support\Str;
 class Category extends Model
 {
     protected $fillable = [
+        "user_id",
         "name",
         "image",
         "description",
         "slug"
     ];
 
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
     protected static function boot()
     {
         parent::boot();

@@ -63,6 +63,11 @@ class User extends Authenticatable
         }
     }
 
+    public function categories()
+    {
+        return $this->hasMany(Category::class);
+    }
+
     public static function booted()
     {
         static::created(function ($user) {
