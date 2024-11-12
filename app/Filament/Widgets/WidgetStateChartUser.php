@@ -8,7 +8,7 @@ use Filament\Widgets\ChartWidget;
 class WidgetStateChartUser extends ChartWidget
 {
     protected static ?string $heading = 'Users';
-    
+    protected int | string | array $columnSpan = 'full';
 
     protected function getData(): array
     {
