@@ -2,12 +2,13 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\CategoryResource\Pages;
-use App\Filament\Resources\CategoryResource\RelationManagers;
-use App\Models\Category;
+use App\Filament\Resources\BlogResource\Pages;
+use App\Filament\Resources\BlogResource\RelationManagers;
+use App\Models\Blog;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Hidden;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -20,9 +21,9 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Auth;
 
-class CategoryResource extends Resource
+class BlogResource extends Resource
 {
-    protected static ?string $model = Category::class;
+    protected static ?string $model = Blog::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'Blogs';
@@ -33,13 +34,20 @@ class CategoryResource extends Resource
             ->schema([
                 TextInput::make("title")->required(),
                 Textarea::make("description")->required(),
-                FileUpload::make("image")
+                FileUpload::make("images")
+                            ->multiple()
                             ->required()
                             ->preserveFilenames()
                             ->disk('public')
-                            ->directory('category'),
-                Hidden::make('user_id')
-                            ->default(Auth::id()),
+                            ->directory('blogs'),
+
+                Select::make("category_id")
+                            ->label('Category')
+                            ->required()
+                            ->relationship('category', 'title'),
+
+                Hidden::make("user_id")
+                        ->default(Auth::id()),
             ])->columns(1);
     }
 
@@ -47,13 +55,15 @@ class CategoryResource extends Resource
     {
         return $table
             ->columns([
-                ImageColumn::make('image')
-                            ->label('Image')
-                            ->disk('public')
-                            ->width(50)
-                            ->height(50),
-                TextColumn::make('title'),
-                TextColumn::make('description'),
+                ImageColumn::make('images')
+                        ->label('Image')
+                        ->disk('public')
+                        ->width(50)
+                        ->height(50),
+                TextColumn::make("title"),
+                TextColumn::make("description")->limit(50),
+                TextColumn::make('category.title')->label('Category'),
+
             ])
             ->filters([
                 //
@@ -78,9 +88,9 @@ class CategoryResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListCategories::route('/'),
-            'create' => Pages\CreateCategory::route('/create'),
-            'edit' => Pages\EditCategory::route('/{record}/edit'),
+            'index' => Pages\ListBlogs::route('/'),
+            'create' => Pages\CreateBlog::route('/create'),
+            'edit' => Pages\EditBlog::route('/{record}/edit'),
         ];
     }
 }

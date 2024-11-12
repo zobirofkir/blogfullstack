@@ -5,25 +5,29 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
-class Category extends Model
+class Blog extends Model
 {
     protected $fillable = [
         "user_id",
+        "category_id",
         "title",
-        "image",
+        "images",
         "description",
-        "slug"
+        "slug",
     ];
 
+    protected $casts = [
+        "images" => "array",
+    ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function blogs()
+    public function category()
     {
-        return $this->hasMany(Blog::class);
+        return $this->belongsTo(Category::class);
     }
 
     protected static function boot()
