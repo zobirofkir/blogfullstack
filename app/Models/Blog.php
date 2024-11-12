@@ -10,6 +10,7 @@ class Blog extends Model
     protected $fillable = [
         "user_id",
         "category_id",
+        "tag_id",
         "title",
         "images",
         "description",
@@ -28,6 +29,11 @@ class Blog extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function tag()
+    {
+        return $this->belongsTo(Tag::class);
     }
 
     protected static function boot()

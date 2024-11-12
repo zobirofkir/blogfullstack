@@ -46,6 +46,10 @@ class BlogResource extends Resource
                             ->required()
                             ->relationship('category', 'title'),
 
+                Select::make('tag_id') 
+                            ->relationship('tag', 'title')
+                            ->required(),
+
                 Hidden::make("user_id")
                         ->default(Auth::id()),
             ])->columns(1);
@@ -63,6 +67,7 @@ class BlogResource extends Resource
                 TextColumn::make("title"),
                 TextColumn::make("description")->limit(50),
                 TextColumn::make('category.title')->label('Category'),
+                TextColumn::make('tag.title')->label('Tag'),
 
             ])
             ->filters([
