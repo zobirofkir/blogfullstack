@@ -1,4 +1,4 @@
-<div class="bg-gray-900 py-4 my-10">
+<div class="bg-gray-900 py-4 my-10 md:px-0 px-4">
     <div class="container mx-auto">
         <div class="max-w-full mx-auto rounded-lg overflow-hidden my-10 ">
             <h1 class="text-3xl font-bold text-white mb-4">Blogs</h1>
