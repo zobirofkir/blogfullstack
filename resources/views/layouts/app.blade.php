@@ -11,6 +11,7 @@
 
     @include('components.header')
 
+    @include('components.slider')
     
     <main>
         {{ $slot }}
