@@ -16,6 +16,9 @@
         {{ $slot }}
     </main>
 
+    @include('components.footer')
+    
+    
     <script src="{{ asset('js/dropdown.js') }}"></script>
 </body>
 </html>
