@@ -22,7 +22,7 @@ class BlogService implements BlogConstructor
     
     public function show($slug)
     {
-        $blogs = Blog::where('slug', $slug)->get();
+        $blogs = Blog::where('slug', $slug)->first();
         return [
             'blogs' => $blogs
         ];

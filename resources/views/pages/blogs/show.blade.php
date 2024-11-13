@@ -9,16 +9,16 @@
 
             @if(!empty($blog->images) && is_array($blog->images))
                 <div class="blog-images mb-4">
-                    <div class="image-gallery grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="image-gallery flex flex-row space-x-4 overflow-x-auto py-2">
                         @foreach($blog->images as $image)
-                            <img src="{{ asset('storage/' . $image) }}" alt="Blog Image" class="w-full h-auto rounded-lg shadow-md object-cover">
+                            <img src="{{ asset('storage/' . $image) }}" alt="Blog Image" class="w-auto h-auto rounded-lg shadow-md object-cover">
                         @endforeach
                     </div>
                 </div>
             @else
                 <p>No images available for this blog.</p>
             @endif
-
+        
 
             <div class="text-sm text-gray-700 mb-2">
                 <span class="font-semibold text-gray-800">By:</span> 

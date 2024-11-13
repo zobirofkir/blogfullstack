@@ -17,7 +17,7 @@ class BlogController extends Controller
 
     public function show($slug)
     {
-        $blog = BlogFacade::show($slug)['blogs'][0];
+        $blog = BlogFacade::show($slug)['blogs'];
         return view('pages.blogs.show', compact('blog'));
     }
 }

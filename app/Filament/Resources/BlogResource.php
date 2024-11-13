@@ -32,7 +32,7 @@ class BlogResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make("title")->required(),
+                TextInput::make("title")->required()->unique(),
                 Textarea::make("description")->required(),
                 FileUpload::make("images")
                             ->multiple()
