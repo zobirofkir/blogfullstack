@@ -40,6 +40,7 @@ class TagResource extends Resource
                 TextColumn::make('title')->searchable(),
                 TextColumn::make('created_at')->dateTime(),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])

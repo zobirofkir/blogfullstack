@@ -55,6 +55,7 @@ class CategoryResource extends Resource
                 TextColumn::make('title'),
                 TextColumn::make('description'),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])

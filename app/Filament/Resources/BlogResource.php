@@ -68,8 +68,8 @@ class BlogResource extends Resource
                 TextColumn::make("description")->limit(50),
                 TextColumn::make('category.title')->label('Category'),
                 TextColumn::make('tag.title')->label('Tag'),
-
-            ])
+            ]) 
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])

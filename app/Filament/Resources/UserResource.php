@@ -69,6 +69,7 @@ class UserResource extends Resource
                 TextColumn::make('is_active')->label('Is Active'),
                 TextColumn::make('created_at')->dateTime(),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])
