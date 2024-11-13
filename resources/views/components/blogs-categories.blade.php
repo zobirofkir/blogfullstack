@@ -3,6 +3,8 @@
         <div class="container mx-auto">
             <div class="max-w-full mx-auto rounded-lg overflow-hidden my-10 ">
                 <h1 class="text-3xl font-bold text-black mb-4">Sports</h1>
+                <hr>
+                <br>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     @foreach ([1, 2, 3, 4, 5, 6, 7, 8] as $item)
                     <a href="#">
