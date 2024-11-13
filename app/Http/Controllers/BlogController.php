@@ -12,7 +12,7 @@ class BlogController extends Controller
 
         $categories = BlogFacade::get()['categories'];
         
-        return view('welcome', compact('blogs', 'categories'));
+        return view('pages.blogs.index', compact('blogs', 'categories'));
     }
 
     public function show($slug)

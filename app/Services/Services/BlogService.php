@@ -9,8 +9,8 @@ class BlogService implements BlogConstructor
 {
     public function get()
     {
-        $blogs = Blog::orderBy('created_at', 'desc')->limit(10)->get();
-
+        $blogs = Blog::orderBy('created_at', 'desc')->paginate(10);
+        
         $categories = Category::orderBy('created_at', 'desc')->limit(10)->get();
         
         return [

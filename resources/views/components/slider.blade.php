@@ -31,7 +31,7 @@
                             
     
             <div class="flex md:flex-col flex-wrap md:gap-8 gap-6 w-full md:w-1/2 p-6 overflow-x-auto transition-all duration-300 ease-in-out">
-                @foreach ($blogs as $blog)
+                @foreach ($blogs->take(5) as $blog)
                     <div class="bg-gray-50 hover:bg-gray-100 rounded-lg p-5 w-full transition-all transform hover:scale-105 hover:shadow-md duration-300 ease-in-out">
                         <a href="{{ route('blogs.show', $blog->slug) }}" class="flex flex-row items-center gap-6">
                             <h1 class="text-blue-600 font-semibold text-lg md:text-xl">
