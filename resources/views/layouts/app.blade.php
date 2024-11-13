@@ -9,11 +9,12 @@
 </head>
 <body>
 
+        
     @include('components.header')
 
     @include('components.search')
 
-    @include('components.slider')
+    @include('components.slider')    
     
     <main>
         {{ $slot }}
