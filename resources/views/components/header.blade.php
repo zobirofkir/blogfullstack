@@ -37,8 +37,8 @@
 
         <nav class="hidden lg:block">
             <ul class="flex flex-row gap-4">
-                <li><a href="/categories" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Categories</a></li>
                 <li><a href="/blogs" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Blog</a></li>
+                <li><a href="/categories" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Categories</a></li>
             </ul>
         </nav>
 
@@ -50,8 +50,8 @@
                 <li><a href="/" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Home</a></li>
                 <li><a href="/abouts" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">About</a></li>
                 <li><a href="/contacts" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Contact</a></li>
-                <li><a href="/categories" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Categories</a></li>
                 <li><a href="/blogs" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Blog</a></li>
+                <li><a href="/categories" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Categories</a></li>
             </ul>
         </nav>
     </div>
