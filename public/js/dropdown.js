@@ -5,10 +5,12 @@ document.addEventListener('DOMContentLoaded', function () {
     menuButton.addEventListener('click', function () {
         if (mobileMenu.classList.contains('hidden')) {
             mobileMenu.classList.remove('hidden');
-            mobileMenu.classList.add('translate-y-0');
+            mobileMenu.classList.add('translate-y-0', 'transition-transform', 'duration-300', 'ease-in-out');
+            mobileMenu.classList.remove('-translate-y-full');
         } else {
             mobileMenu.classList.add('hidden');
             mobileMenu.classList.remove('translate-y-0');
+            mobileMenu.classList.add('-translate-y-full');
         }
     });
 });
