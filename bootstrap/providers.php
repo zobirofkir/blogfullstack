@@ -10,4 +10,5 @@ return [
     App\Providers\Filament\AdminPanelProvider::class,
     App\Providers\NewLetterServiceProvider::class,
     App\Providers\NewsLetterServiceProvider::class,
+    App\Providers\SearchServiceProvider::class,
 ];
