@@ -34,7 +34,7 @@
                 <li><a href="/categories" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Categories</a></li>
                 <li><a href="#" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Advertisement</a></li>
                 <li><a href="#" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Work Team</a></li>
-                <li><a href="#" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Contact Us</a></li>
+                <li><a href="/contacts" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Contact Us</a></li>
             </ul>
         </nav>
 
@@ -58,7 +58,7 @@
                 {{-- Please Add Here Your Buy Me A Coffee Url --}}
                 <li><a href="https://www.buymeacoffee.com/zobirofkir" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase shadow-lg px-4 py-2 rounded-full">Donate</a></li>
 
-                <li><a href="#" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase shadow-lg px-4 py-2 rounded-full">Contact Us</a></li>
+                <li><a href="contacts" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase shadow-lg px-4 py-2 rounded-full">Contact Us</a></li>
             </ul>
         </nav>
     </div>

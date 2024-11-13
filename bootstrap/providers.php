@@ -7,6 +7,7 @@ return [
     App\Providers\CategoryProvider::class,
     App\Providers\CategoryServiceProvider::class,
     App\Providers\CommentServiceProvider::class,
+    App\Providers\ContactServiceProvider::class,
     App\Providers\Filament\AdminPanelProvider::class,
     App\Providers\NewLetterServiceProvider::class,
     App\Providers\NewsLetterServiceProvider::class,

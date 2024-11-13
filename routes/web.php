@@ -4,6 +4,7 @@ use App\Http\Controllers\BarCategoryController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsLetterController;
 use App\Http\Controllers\SearchController;
@@ -60,3 +61,10 @@ Route::post('/newsletter', [NewsLetterController::class, 'store'])->name('newsle
  */
 
  Route::get('/search', [SearchController::class, 'search'])->name('search.results');
+
+
+ /**
+  * Contact Route
+  */
+
+ Route::resource('/contacts', ContactController::class);
