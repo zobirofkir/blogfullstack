@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,3 +31,14 @@ Route::get('/categories', [CategoryController::class, 'index'])->name("blogs.ind
  * Show Category
  */
 Route::get('/category/{slug}', [CategoryController::class, 'show'])->name("category.show");
+
+
+/**
+ * Get All Comments
+ */
+Route::get("/comments", [CommentController::class, "index"])->name("comments.index");
+
+/**
+ * Post Comment
+ */
+Route::post("/comments", [CommentController::class, "store"])->name("comments.store");

@@ -40,10 +40,12 @@
 
 
         <div class="mt-8">
-            <h2 class="text-xl font-semibold mb-4">(10 comments)</h2>
+            <h2 class="text-xl font-semibold mb-4">{{ $blog->comments->count() }} Comments</h2>
 
-            <form method="POST" action="#" class="mt-6 mb-10">
+            <form method="POST" action="{{ route('comments.store') }}" class="mt-6 mb-10">
                 @csrf
+                <input type="hidden" name="blog_id" value="{{ $blog->id }}">
+
                 <div class="mb-4">
                     <input type="text" name="name" class="w-full border border-gray-300 rounded-lg p-2" placeholder="Your Name" required>
                 </div>
@@ -51,20 +53,20 @@
                     <input type="email" name="email" class="w-full border border-gray-300 rounded-lg p-2" placeholder="Your Email" required>
                 </div>
                 <div class="mb-4">
-                    <textarea name="content" rows="4" class="w-full border border-gray-300 rounded-lg p-2" placeholder="Add your comment here..." required></textarea>
+                    <textarea name="comment" rows="4" class="w-full border border-gray-300 rounded-lg p-2" placeholder="Add your comment here..." required></textarea>
                 </div>
                 <button type="submit" class="mt-2 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
-                    Submit Comment
+                    Send
                 </button>
             </form>
 
-            @foreach([1, 2, 3, 4, 5] as $comment)
+            @foreach ($blog->comments as $comment)
                 <div class="bg-gray-200 rounded-lg p-4 mb-4">
                     <div class="flex justify-between items-center">
-                        <span class="font-semibold text-gray-800">zobir</span>
-                        <span class="text-sm text-gray-500">17/06/2023</span>
+                        <span class="font-semibold text-gray-800">{{ $comment->name }}</span>
+                        <span class="text-sm text-gray-500">{{ $comment->created_at->diffForHumans() }}</span>
                     </div>
-                    <p class="mt-2 text-gray-700">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, accusantium.</p>
+                    <p class="mt-2 text-gray-700">{{ $comment->comment }}</p>
                 </div>
             @endforeach
 

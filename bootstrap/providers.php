@@ -6,5 +6,6 @@ return [
     App\Providers\BlogServiceProvider::class,
     App\Providers\CategoryProvider::class,
     App\Providers\CategoryServiceProvider::class,
+    App\Providers\CommentServiceProvider::class,
     App\Providers\Filament\AdminPanelProvider::class,
 ];
