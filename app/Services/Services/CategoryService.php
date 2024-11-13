@@ -17,8 +17,13 @@ class CategoryService implements CategoryConstructor
     public function show($slug)
     {
         $category = Category::where('slug', $slug)->first();
+
+        $blogs = $category->blogs()->paginate(6);
+
+
         return [
-            'category' => $category
+            'category' => $category,
+            'blogs' => $blogs
         ];
     }
 }
