@@ -7,7 +7,7 @@
                 <br>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     @foreach ($categorie->blogs as $blog)
-                    <a href="#">
+                    <a href="{{ route('blogs.show', $blog->slug) }}">
                         <div class="relative w-full group">
                             <img
                                 src="{{asset('storage/'.$blog->images[0])}}"
