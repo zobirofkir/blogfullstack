@@ -4,7 +4,7 @@
     
     
             <div class="w-full md:w-1/2 p-6 overflow-hidden">
-                <div id="imageSlider" class="flex transition-transform duration-500 ease-in-out max-w-[50%] gap-4">
+                <div id="imageSlider" class="flex transition-transform duration-500 ease-in-out md:max-w-[75%] max-w-[100%] gap-4">
                     @foreach ($blogs as $blog)
                         <div class="image-item w-full flex-shrink-0 relative">
 

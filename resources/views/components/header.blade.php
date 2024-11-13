@@ -30,6 +30,7 @@
 
         <nav class="hidden lg:block mx-auto" id="navbar-menu">
             <ul class="flex flex-row gap-4">
+                <li><a href="/" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Home</a></li>
                 <li><a href="/blogs" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Blog</a></li>
                 <li><a href="/categories" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Categories</a></li>
                 <li><a href="#" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Advertisement</a></li>

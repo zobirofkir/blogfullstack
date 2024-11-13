@@ -29,7 +29,7 @@
 
         
     @include('components.header')
-
+    @include('components.bar-categories')
     @include('components.search')
     
     <main>

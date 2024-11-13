@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BarCategoryController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
@@ -25,7 +26,7 @@ Route::get('/blog/{slug}', [BlogController::class, 'show'])->name("blogs.show");
 /**
  * Get Categories
  */
-Route::get('/categories', [CategoryController::class, 'index'])->name("blogs.index");
+Route::get('/categories', [CategoryController::class, 'index'])->name("categories.index");
 
 
 /**
