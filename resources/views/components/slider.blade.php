@@ -34,8 +34,8 @@
                 @foreach ($blogs->take(5) as $blog)
                     <div class="bg-gray-50 hover:bg-gray-100 rounded-lg p-5 w-full transition-all transform hover:scale-105 hover:shadow-md duration-300 ease-in-out">
                         <a href="{{ route('blogs.show', $blog->slug) }}" class="flex flex-row items-center gap-6">
-                            <h1 class="text-blue-600 font-semibold text-lg md:text-xl">
-                                {{$blog->created_at->format('M d, Y')}}
+                            <h1 class="text-blue-600 font-semibold text-sm md:text-sm">
+                                {{$blog->created_at->format('d/m/Y')}}
                             </h1>
                             <p class="text-lg text-gray-700 font-medium leading-relaxed line-clamp-2 md:line-clamp-3">
                                 {{Str::limit($blog->description, 50)}}
