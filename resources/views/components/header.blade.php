@@ -1,6 +1,6 @@
 <div class="bg-white shadow-md">
     <div class="flex justify-between items-center px-8 py-4">
-        <div class="text-2xl font-bold">
+        <div class="md:text-2xl text-lg font-bold">
             <h1>{{ config('app.name') }}</h1>
         </div>
 
