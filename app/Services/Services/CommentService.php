@@ -10,7 +10,7 @@ class CommentService implements CommentConstructor
 {
     public function get()
     {
-        $blogId = request()->get('blog_id'); // Get the blog_id from the request
+        $blogId = request()->get('blog_id');
 
         $comments = Comment::where('blog_id', $blogId)->get();
 
