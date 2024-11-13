@@ -9,7 +9,7 @@
         <div class="flex flex-col md:flex-row gap-4">
             <a href="/privacy-policy" class="hover:text-blue-500">Privacy Policy</a>
             <a href="/terms-of-service" class="hover:text-blue-500">Terms of Service</a>
-            <a href="/contact" class="hover:text-blue-500">Contact Us</a>
+            <a href="/contacts" class="hover:text-blue-500">Contact Us</a>
         </div>
 
 
