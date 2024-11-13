@@ -27,20 +27,22 @@
             </svg>
         </button>
 
-        <nav class="hidden lg:block" id="navbar-menu">
-            <ul class="flex flex-row gap-4">
-                <li><a href="/" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Home</a></li>
-                <li><a href="/abouts" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">About</a></li>
-                <li><a href="/contacts" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Contact</a></li>
-            </ul>
-        </nav>
 
-        <nav class="hidden lg:block">
+        <nav class="hidden lg:block mx-auto" id="navbar-menu">
             <ul class="flex flex-row gap-4">
                 <li><a href="/blogs" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Blog</a></li>
                 <li><a href="/categories" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Categories</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Advertisement</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Work Team</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Contact Us</a></li>
             </ul>
         </nav>
+
+
+        <div class="hidden md:flex items-center gap-4">
+            {{-- Please Add Here Your Buy Me A Coffee Url --}}
+            <a href="https://www.buymeacoffee.com/zobirofkir" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition font-bold text-lg">Donate</a>
+        </div>
 
         <nav
             class="absolute top-16 left-0 w-full bg-white shadow-lg hidden transform transition-transform duration-300 ease-in-out lg:hidden"
@@ -48,10 +50,12 @@
         >
             <ul class="flex flex-col gap-2 py-4 px-8">
                 <li><a href="/" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Home</a></li>
-                <li><a href="/abouts" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">About</a></li>
-                <li><a href="/contacts" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Contact</a></li>
                 <li><a href="/blogs" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Blog</a></li>
                 <li><a href="/categories" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Categories</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Advertisement</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Work Team</a></li>
+                <li><a href="/donate" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Donate</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Contact Us</a></li>
             </ul>
         </nav>
     </div>
