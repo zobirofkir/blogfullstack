@@ -2,7 +2,7 @@
     <div class="flex justify-between items-center px-8 py-4">
         <div class="md:text-2xl text-lg font-bold">
             <a href="/">
-                <h1>{{ config('app.name') }}</h1>
+                <img src="{{ asset('images/icon/icon.png') }}" class="h-10 w-10 rounded-full" alt="Default image">
             </a>
         </div>
 
