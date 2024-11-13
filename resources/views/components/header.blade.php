@@ -1,7 +1,9 @@
-<div class="bg-white shadow-md">
+<div class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
     <div class="flex justify-between items-center px-8 py-4">
         <div class="md:text-2xl text-lg font-bold">
-            <h1>{{ config('app.name') }}</h1>
+            <a href="/">
+                <h1>{{ config('app.name') }}</h1>
+            </a>
         </div>
 
         <button
@@ -25,12 +27,15 @@
             </svg>
         </button>
 
-        <nav class="hidden lg:flex flex-row gap-8" id="navbar-menu">
+        <nav class="hidden lg:block" id="navbar-menu">
             <ul class="flex flex-row gap-4">
                 <li><a href="/" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Home</a></li>
                 <li><a href="/abouts" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">About</a></li>
                 <li><a href="/contacts" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Contact</a></li>
             </ul>
+        </nav>
+
+        <nav class="hidden lg:block">
             <ul class="flex flex-row gap-4">
                 <li><a href="/categories" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Categories</a></li>
                 <li><a href="/blogs" class="text-gray-700 hover:text-blue-500 transition font-bold text-lg">Blog</a></li>
