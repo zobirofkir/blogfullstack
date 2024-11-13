@@ -11,9 +11,11 @@ class CommentService implements CommentConstructor
     public function get()
     {
         $blogId = request()->get('blog_id');
-
-        $comments = Comment::where('blog_id', $blogId)->get();
-
+    
+        $comments = Comment::where('blog_id', $blogId)
+                            ->orderBy('created_at', 'desc')
+                            ->get(); 
+    
         return [
             "comments" => $comments
         ];

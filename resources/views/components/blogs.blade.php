@@ -13,7 +13,7 @@
                         />
                         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
                             <h2 class="text-white text-2xl font-semibold">{{$blog->title}}</h2>
-                            <p class="text-white text-sm mt-1">{{Str::limit($blog->description, 80)}}</p>
+                            <p class="text-white text-sm mt-1">{{Str::limit($blog->description, 20)}}</p>
                         </div>
                     </div>
                 </a>

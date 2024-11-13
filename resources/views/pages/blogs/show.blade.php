@@ -60,7 +60,7 @@
                 </button>
             </form>
 
-            @foreach ($blog->comments as $comment)
+            @foreach ($blog->comments->reverse() as $comment)
                 <div class="bg-gray-200 rounded-lg p-4 mb-4">
                     <div class="flex justify-between items-center">
                         <span class="font-semibold text-gray-800">{{ $comment->name }}</span>
