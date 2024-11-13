@@ -18,8 +18,8 @@ class Blog extends Model
     ];
 
     protected $casts = [
-        "images" => "array",
-    ];
+        'images' => 'array',
+    ];    
 
     public function user()
     {

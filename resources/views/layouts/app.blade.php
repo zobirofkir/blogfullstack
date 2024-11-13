@@ -31,8 +31,6 @@
     @include('components.header')
 
     @include('components.search')
-
-    @include('components.slider')    
     
     <main>
         {{ $slot }}
