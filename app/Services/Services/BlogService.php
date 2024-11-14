@@ -11,6 +11,9 @@ class BlogService implements BlogConstructor
     {
         $blogs = Blog::orderBy('created_at', 'desc')->paginate(10);
         
+        /**
+         * Filter Blogs By Categories
+         */
         $categories = Category::orderBy('created_at', 'desc')->limit(10)->get();
         
         return [

@@ -24,6 +24,9 @@ class NewsLetterService implements NewsLetterConstructor
             'email' => $validated['email']
         ]);
 
+        /**
+         * Send Email To Subscribed User To Conferme Here Sunscription
+         */
         Mail::to($subscriber->email)->send(new NewsletterSubscriptionConfirmation($subscriber));
 
         return redirect()->back();

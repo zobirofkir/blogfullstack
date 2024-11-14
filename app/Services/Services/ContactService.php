@@ -13,6 +13,9 @@ class ContactService implements ContactConstructor
     {
         $contact = Contact::create($request->validated());
 
+        /**
+         * Send Email To (MAIL_FROM_ADDRESS) exist in .env file
+         */
         Mail::to(env("MAIL_FROM_ADDRESS"))->send(new ContactMail($contact));
 
         return [
