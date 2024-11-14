@@ -5,13 +5,11 @@
             <h2 class="text-2xl font-bold">{{ config('app.name') }}</h2>
         </div>
 
-
         <div class="flex flex-col md:flex-row gap-4">
-            <a href="/privacy-policy" class="hover:text-blue-500">Privacy Policy</a>
-            <a href="/terms-of-service" class="hover:text-blue-500">Terms of Service</a>
-            <a href="/contacts" class="hover:text-blue-500">Contact Us</a>
+            <a href="/privacy-policy" class="hover:text-blue-500">سياسة الخصوصية</a>
+            <a href="/terms-of-service" class="hover:text-blue-500">شروط الخدمة</a>
+            <a href="/contacts" class="hover:text-blue-500">اتصل بنا</a>
         </div>
-
 
         <div class="flex gap-4 mt-4 md:mt-0">
             <a href="https://www.facebook.com" target="_blank" class="hover:text-blue-500">
@@ -34,6 +32,6 @@
     </div>
 
     <div class="text-center mt-4 text-gray-400">
-        <p>&copy; {{ date('Y') }} {{ config('app.name') }}. All rights reserved.</p>
+        <p>&copy; {{ date('Y') }} {{ config('app.name') }}. جميع الحقوق محفوظة.</p>
     </div>
 </footer>

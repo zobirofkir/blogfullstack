@@ -2,7 +2,7 @@
     $categories = App\Services\Facades\CategoryFacade::get()['categories'];
 @endphp
 
-<div class="container mx-auto mt-[50px] md:px-0 px-6">
+<div class="container mx-auto mt-[80px] md:px-0 px-6">
     <div class="flex flex-row gap-4 whitespace-nowrap overflow-x-scroll">
         @foreach ($categories as $category)
             <div>

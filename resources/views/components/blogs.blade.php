@@ -1,7 +1,7 @@
 <div class="bg-gray-900 py-4 my-10 md:px-0 px-4">
     <div class="container mx-auto">
         <div class="max-w-full mx-auto rounded-lg overflow-hidden my-10 ">
-            <h1 class="text-3xl font-bold text-white mb-4">Blogs</h1>
+            <h1 class="text-3xl font-bold text-white mb-4">المدونات</h1>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 @foreach ($blogs->take(8) as $blog)
                 <a href="{{route('blogs.show', $blog->slug)}}">
