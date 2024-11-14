@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout :title="$category->title">
     <div class="container mx-auto px-6 py-8 flex flex-col lg:flex-row items-center justify-center bg-gray-50 rounded-lg shadow-xl">
         <img src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->title }}" class="w-[300px] h-[300px] shadow-lg hover:animate-spin transition duration-300 object-cover rounded-full">
     </div>

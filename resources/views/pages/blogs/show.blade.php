@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout :title="$blog->title">
     <div class="container mx-auto px-4 md:px-8 lg:px-28 my-8">      
 
         <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">

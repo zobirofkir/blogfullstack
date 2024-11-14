@@ -8,12 +8,14 @@ use Illuminate\View\Component;
 
 class AppLayout extends Component
 {
+    public string $title;
+
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct( string $title = "" )
     {
-        //
+        $this->title = $title;
     }
 
     /**
@@ -21,6 +23,6 @@ class AppLayout extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('layouts.app');
+        return view('layouts.app', ["title" => $this->title]);
     }
 }
