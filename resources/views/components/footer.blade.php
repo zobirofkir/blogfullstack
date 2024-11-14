@@ -6,8 +6,8 @@
         </div>
 
         <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-            <a href="/privacy-policy" class="hover:text-blue-500">سياسة الخصوصية</a>
-            <a href="/terms-of-service" class="hover:text-blue-500">شروط الخدمة</a>
+            <a href="/blogs" class="hover:text-blue-500">المدونات</a>
+            <a href="/categories" class="hover:text-blue-500">الفئات</a>
             <a href="/contacts" class="hover:text-blue-500">اتصل بنا</a>
         </div>
 
