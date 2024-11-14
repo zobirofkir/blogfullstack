@@ -3,7 +3,7 @@
         <div class="mx-auto max-w-screen-md sm:text-center">
             <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">اشترك في نشرتنا الإخبارية</h2>
             <p class="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-12 sm:text-xl">ابق على اطلاع بأحدث تقدم خارطة الطريق والإعلانات والخصومات الحصرية. لا تتردد في الاشتراك باستخدام بريدك الإلكتروني.</p>
-            <form action="{{ route('newsletter.store') }}" method="POST">
+            <form action="{{ url('/newsletter') }}" method="POST">
                 @csrf
                 <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
                     <div class="relative w-full">

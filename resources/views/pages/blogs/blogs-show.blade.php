@@ -64,7 +64,7 @@
         <div class="mt-8">
             <h2 class="text-xl font-semibold mb-4">{{ $blog->comments->count() }} تعليق</h2>
 
-            <form method="POST" action="{{ route('comments.store') }}" class="mt-6 mb-10">
+            <form method="POST" action="{{ url('/comments') }}" class="mt-6 mb-10">
                 @csrf
                 <input type="hidden" name="blog_id" value="{{ $blog->id }}">
 

@@ -12,9 +12,9 @@ use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
 /**
- * Home Page
+ * Home Routes
  */
-Route::get('/', [HomeController::class, 'index']);
+Route::resource('/', HomeController::class);
 
 /**
  * Blog Routes
@@ -27,23 +27,15 @@ Route::resource('/blogs', BlogController::class);
 Route::resource('/categories', CategoryController::class);
 
 /**
- * Get All Comments
+ * Comment Routes
  */
-Route::get("/comments", [CommentController::class, "index"])->name("comments.index");
+Route::resource("/comments", CommentController::class);
 
 /**
- * Post Comment
- */
-Route::post("/comments", [CommentController::class, "store"])->name("comments.store");
-
-
-/**
- * Post News Letter
+ * NewsLetter Routes
  */
 
-Route::post('/newsletter', [NewsLetterController::class, 'store'])->name('newsletter.store');
-
-
+Route::resource('/newsletter', NewsLetterController::class);
 
 /**
  * Search Route
