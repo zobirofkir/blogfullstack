@@ -23,11 +23,11 @@
 
         <nav class="hidden lg:flex w-full mx-auto" id="navbar-menu">
             <ul class="flex flex-row gap-4">
-                <li><a href="/" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">الرئيسية</a></li>
-                <li><a href="/blogs" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">المدونة</a></li>
-                <li><a href="/categories" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">الفئات</a></li>
-                <li><a href="/teams" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">فريق العمل</a></li>
                 <li><a href="/contacts" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">اتصل بنا</a></li>
+                <li><a href="/teams" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">فريق العمل</a></li>
+                <li><a href="/categories" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">الفئات</a></li>
+                <li><a href="/blogs" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">المدونة</a></li>
+                <li><a href="/" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">الرئيسية</a></li>
             </ul>
         </nav>
 
