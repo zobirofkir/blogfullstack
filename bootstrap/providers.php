@@ -12,5 +12,6 @@ return [
     App\Providers\NewLetterServiceProvider::class,
     App\Providers\NewsLetterServiceProvider::class,
     App\Providers\SearchServiceProvider::class,
+    App\Providers\TagServiceProvider::class,
     App\Providers\TeamServiceProvider::class,
 ];

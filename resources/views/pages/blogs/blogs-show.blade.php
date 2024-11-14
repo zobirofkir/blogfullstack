@@ -29,7 +29,24 @@
                 </p>
             </div>
 
-            <div class="flex flex-col md:flex-row justify-between items-center border-t border-gray-300 pt-4 mt-4">
+            @if($tags->isNotEmpty())
+            <div class="blogs mt-4">
+                <h3 class="font-semibold text-gray-800">المدونات المتعلقة بهذا الوسم:</h3>
+                <ul class="mt-2 flex flex-wrap gap-2">
+                    @foreach($tags as $tag)
+                        <li>
+                            <a href="{{ url('/tags', $tag->id) }}" class="text-blue-600 hover:underline">
+                                {{ $tag->title }}
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        @else
+            <p>لا توجد مدونات لهذا الوسم.</p>
+        @endif
+
+        <div class="flex flex-col md:flex-row justify-between items-center border-t border-gray-300 pt-4 mt-4">
                 <a href="{{ url('/') }}" class="text-blue-600 hover:underline font-medium mb-2 md:mb-0">
                     العودة
                 </a>
