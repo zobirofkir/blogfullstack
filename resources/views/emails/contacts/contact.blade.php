@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>New Contact Form Submission</title>
+    <title>إرسال نموذج الاتصال الجديد</title>
 </head>
 <body>
-    <h1>Contact Form Submission</h1>
-    <p><strong>Name:</strong> {{ $contact['name'] }}</p>
-    <p><strong>Email:</strong> {{ $contact['email'] }}</p>
-    <p><strong>Subject:</strong> {{ $contact['subject'] }}</p>
-    <p><strong>Message:</strong></p>
+    <h1>إرسال نموذج الاتصال</h1>
+    <p><strong>الاسم:</strong> {{ $contact['name'] }}</p>
+    <p><strong>البريد الإلكتروني:</strong> {{ $contact['email'] }}</p>
+    <p><strong>الموضوع:</strong> {{ $contact['subject'] }}</p>
+    <p><strong>الرسالة:</strong></p>
     <p>{{ $contact['message'] }}</p>
 </body>
 </html>
