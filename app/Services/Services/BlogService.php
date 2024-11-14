@@ -26,7 +26,7 @@ class BlogService implements BlogConstructor
     public function show($slug)
     {
         $blogs = Blog::where('slug', $slug)->first();
-        $relatedBlogs = Blog::all();
+        $relatedBlogs = Blog::orderBy('created_at', 'desc')->get();
         return [
             'blogs' => $blogs,
             'relatedBlogs' => $relatedBlogs

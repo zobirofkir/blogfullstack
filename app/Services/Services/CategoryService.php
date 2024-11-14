@@ -18,7 +18,7 @@ class CategoryService implements CategoryConstructor
     {
         $category = Category::where('slug', $slug)->first();
 
-        $blogs = $category->blogs()->paginate(6);
+        $blogs = $category->blogs()->orderBy('created_at', 'desc')->paginate(6);
 
 
         return [
