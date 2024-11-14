@@ -8,7 +8,7 @@ class CategoryService implements CategoryConstructor
 {
     public function get()
     {
-        $categories = Category::orderBy('created_at', 'desc')->limit(10)->get();
+        $categories = Category::orderBy('created_at', 'desc')->paginate(10);
         return [
             'categories' => $categories
         ];
