@@ -32,7 +32,6 @@
                 <li><a href="/" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Home</a></li>
                 <li><a href="/blogs" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Blog</a></li>
                 <li><a href="/categories" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Categories</a></li>
-                <li><a href="#" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Advertisement</a></li>
                 <li><a href="/teams" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Work Team</a></li>
                 <li><a href="/contacts" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Contact Us</a></li>
             </ul>
@@ -52,7 +51,6 @@
                 <li><a href="/" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase shadow-lg px-4 py-2 rounded-full">Home</a></li>
                 <li><a href="/blogs" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase shadow-lg px-4 py-2 rounded-full">Blog</a></li>
                 <li><a href="/categories" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase shadow-lg px-4 py-2 rounded-full">Categories</a></li>
-                <li><a href="#" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase shadow-lg px-4 py-2 rounded-full">Advertisement</a></li>
                 <li><a href="/teams" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase shadow-lg px-4 py-2 rounded-full">Work Team</a></li>
 
                 {{-- Please Add Here Your Buy Me A Coffee Url --}}
