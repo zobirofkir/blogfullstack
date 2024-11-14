@@ -23,14 +23,13 @@
 
         <nav class="hidden lg:flex w-full mx-auto" id="navbar-menu">
             <ul class="flex flex-row gap-4">
-                <li><a href="/contacts" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">اتصل بنا</a></li>
-                <li><a href="/teams" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">فريق العمل</a></li>
-                <li><a href="/categories" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">الفئات</a></li>
-                <li><a href="/blogs" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">المدونة</a></li>
-                <li><a href="/" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">الرئيسية</a></li>
+                <li><a href="/contacts" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">اتصل بنا</a></li>
+                <li><a href="/teams" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">فريق العمل</a></li>
+                <li><a href="/categories" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">الفئات</a></li>
+                <li><a href="/blogs" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">المدونة</a></li>
+                <li><a href="/" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">الرئيسية</a></li>
             </ul>
         </nav>
-
 
         <div class="md:text-2xl text-lg font-bold">
             <a href="/">
@@ -43,7 +42,6 @@
             id="mobile-menu"
         >
             <div class="flex justify-between items-center px-8 py-4">
-
                 <button
                     id="close-menu"
                     class="text-white text-4xl font-bold"
@@ -54,11 +52,11 @@
             </div>
         
             <ul class="flex flex-col gap-8 justify-center items-center py-4 px-8 h-full">
-                <li><a href="/" class="text-white hover:text-blue-300 transition font-bold text-xl uppercase shadow-lg px-4 py-2 rounded-full">الرئيسية</a></li>
-                <li><a href="/blogs" class="text-white hover:text-blue-300 transition font-bold text-xl uppercase shadow-lg px-4 py-2 rounded-full">المدونة</a></li>
-                <li><a href="/categories" class="text-white hover:text-blue-300 transition font-bold text-xl uppercase shadow-lg px-4 py-2 rounded-full">الفئات</a></li>
-                <li><a href="/teams" class="text-white hover:text-blue-300 transition font-bold text-xl uppercase shadow-lg px-4 py-2 rounded-full">فريق العمل</a></li>
-                <li><a href="/contacts" class="text-white hover:text-blue-300 transition font-bold text-xl uppercase shadow-lg px-4 py-2 rounded-full">اتصل بنا</a></li>
+                <li><a href="/" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase shadow-lg px-4 py-2 rounded-full">الرئيسية</a></li>
+                <li><a href="/blogs" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase shadow-lg px-4 py-2 rounded-full">المدونة</a></li>
+                <li><a href="/categories" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase shadow-lg px-4 py-2 rounded-full">الفئات</a></li>
+                <li><a href="/teams" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase shadow-lg px-4 py-2 rounded-full">فريق العمل</a></li>
+                <li><a href="/contacts" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase shadow-lg px-4 py-2 rounded-full">اتصل بنا</a></li>
             </ul>
         </nav>
     </div>

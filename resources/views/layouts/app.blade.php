@@ -42,5 +42,6 @@
 
     <script src="{{ asset('js/dropdown.js') }}"></script>
     <script src="{{ asset('js/slider.js') }}"></script>
+    <script src="{{ asset('js/navbar.js') }}"></script>
 </body>
 </html>
