@@ -1,4 +1,4 @@
-<div class="bg-gray-900 my-5 md:px-0 px-4">
+<div class="bg-gray-900 my-5 md:px-0 px-4 py-1">
     <div class="container mx-auto">
         <div class="max-w-full mx-auto rounded-lg overflow-hidden my-10 ">
             <h1 class="text-3xl font-bold text-white mb-4">المدونات</h1>
@@ -20,7 +20,7 @@
                 @endforeach
             </div>
 
-            <div class="flex justify-between items-center w-full my-10">
+            <div class="flex justify-between items-center w-full my-8">
                 <a href="/blogs" class="flex items-center gap-4 text-white md:text-xl text-md">
                     <i class="fa-solid fa-arrow-left fa-2xl text-white"></i>
                     <h1>المزيد من البرامج</h1>
