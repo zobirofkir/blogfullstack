@@ -31,7 +31,7 @@
             <h2 class="text-2xl font-semibold mb-4">المدونات الأخيرة</h2>
             @foreach ($blogs as $latestBlog)
                 <div class="mb-4">
-                    <h3 class="text-lg font-bold">{{ $latestBlog->title }}</h3>
+                    <h3 class="text-lg font-bold">{{ Str::limit($latestBlog->title, 20) }}</h3>
                     <a href="{{route('blogs.show', $latestBlog->slug)}}" class="flex gap-2">
                         <p class="text-blue-600">
                             {{$latestBlog->created_at->diffForHumans()}}

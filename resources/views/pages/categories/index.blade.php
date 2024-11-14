@@ -32,7 +32,7 @@
             <h2 class="text-2xl font-semibold mb-4">الفئات الأخيرة</h2>
             @foreach ($categories as $latestCategory)
                 <div class="mb-4">
-                    <h3 class="text-lg font-bold">{{ $latestCategory->title }}</h3>
+                    <h3 class="text-lg font-bold">{{ Str::limit($latestCategory->title, 20) }}</h3>
                     <a href="{{ route('category.show', $latestCategory->slug) }}" class="flex gap-2">
                         <p class="text-blue-600">
                             {{ $latestCategory->created_at->diffForHumans() }}
