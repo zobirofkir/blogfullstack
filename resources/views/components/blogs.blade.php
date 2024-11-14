@@ -27,10 +27,10 @@
                 </a>
             
                 <div class="flex items-center gap-4 text-white md:text-xl text-md">
-                        <a href="https://www.youtube.com/@bawabapress/featured" class="text-red-600">
+                        <a href="#" class="text-red-600">
                             <i class="fa-brands fa-youtube fa-2xl"></i>
                         </a>
-                        <a href="https://www.facebook.com/bawabapress" class="text-blue-600">
+                        <a href="#" class="text-blue-600">
                             <i class="fa-brands fa-facebook fa-2xl"></i>
                         </a>
                         
