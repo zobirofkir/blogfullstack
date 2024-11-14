@@ -11,6 +11,6 @@ class SearchController extends Controller
     {
         $title = $request->input('title');
         $blogs = SearchFacade::search($title);
-        return view('pages.search.results', compact('blogs'));
+        return view('pages.search.search', compact('blogs'));
     }
 }
