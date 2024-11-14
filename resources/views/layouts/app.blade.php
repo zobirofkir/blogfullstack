@@ -21,6 +21,7 @@
         <meta name="twitter:title" content="{{ config('app.name') }}">
         <meta name="twitter:description" content="Learn from insightful articles and tutorials on web development and technology at {{ config('app.name') }}.">
         <meta name="twitter:image" content="{{ asset('images/icon/icon.png') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <title>{{ config('app.name') }}</title>
