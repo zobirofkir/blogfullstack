@@ -5,14 +5,14 @@
             <div class="w-full md:w-1/2 p-6 overflow-hidden">
                 <div id="imageSlider" class="flex transition-transform duration-500 ease-in-out md:max-w-[75%] max-w-[100%] gap-4">
                     @foreach ($blogs as $blog)
-                        <div class="image-item w-full flex-shrink-0 relative">
-
+                        <div class="image-item w-full flex-shrink-0 relative md:h-[300px] h-[200px]">
+                
                             <a href="{{ route('blogs.show', $blog->slug) }}">
                                 <img
-                                src="{{ asset('storage/' . $blog->images[0]) }}"
-                                alt="صورة"
-                                class="object-cover rounded-lg shadow-lg w-full h-full transition-transform duration-300 ease-in-out"
-                            />
+                                    src="{{ asset('storage/' . $blog->images[0]) }}"
+                                    alt="صورة"
+                                    class="object-cover rounded-lg shadow-lg w-full h-full transition-transform duration-300 ease-in-out" 
+                                />
                             </a>
                             <div class="absolute bottom-4 left-4 text-white font-semibold text-xl bg-black bg-opacity-50 p-2 rounded-md">
                                 {{ $blog->title }}
@@ -20,7 +20,7 @@
                         </div>
                     @endforeach
                 </div>
-            
+                            
                 <div class="flex justify-between gap-4 mt-10">
                     <button id="prevButton" class="px-4 py-2 bg-white text-white rounded-md hover:bg-gray-100 transition-colors duration-300 ease-in-out">
                         <i class="fa-solid fa-left-long fa-xl" style="color: #0073ca;"></i>
