@@ -73,6 +73,11 @@ class User extends Authenticatable
         return $this->hasMany(Blog::class);
     }
 
+    public function teams()
+    {
+        return $this->hasMany(Team::class);
+    }
+
     public static function booted()
     {
         static::created(function ($user) {

@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\Facades\TeamFacade;
 use Illuminate\Http\Request;
 
 class TeamController extends Controller
 {
     public function index()
     {
-        return view("pages.teams.teams");
+        $teams = TeamFacade::get()['teams'];
+        return view("pages.teams.teams", compact("teams"));
     }
 }
