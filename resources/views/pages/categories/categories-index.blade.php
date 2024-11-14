@@ -11,7 +11,7 @@
                         <div class="p-6">
                             <h2 class="text-xl font-bold mb-2">{{ $category->title }}</h2>
                             <p class="text-gray-600 mb-4">{{ Str::limit($category->description, 100) }}</p>                        
-                            <a href="{{ route('category.show', $category->slug) }}" class="text-blue-500 hover:underline">عرض المدونات</a>
+                            <a href="{{ url('/categories', $category->slug) }}" class="text-blue-500 hover:underline">عرض المدونات</a>
                         </div>
                     </div>
                 @endforeach
@@ -33,7 +33,7 @@
             @foreach ($categories as $latestCategory)
                 <div class="mb-4">
                     <h3 class="text-lg font-bold">{{ Str::limit($latestCategory->title, 20) }}</h3>
-                    <a href="{{ route('category.show', $latestCategory->slug) }}" class="flex gap-2">
+                    <a href="{{ url('/categories', $latestCategory->slug) }}" class="flex gap-2">
                         <p class="text-blue-600">
                             {{ $latestCategory->created_at->diffForHumans() }}
                         </p>

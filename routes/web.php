@@ -17,26 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 
 /**
- * List All Blogs
+ * Blog Routes
  */
-Route::get('/blogs', [BlogController::class, 'index'])->name("blogs.index");
+Route::resource('/blogs', BlogController::class);
 
 /**
- * Show Single Blog
+ * Category Routes
  */
-Route::get('/blog/{slug}', [BlogController::class, 'show'])->name("blogs.show");
-
-/**
- * Get Categories
- */
-Route::get('/categories', [CategoryController::class, 'index'])->name("categories.index");
-
-
-/**
- * Show Category
- */
-Route::get('/category/{slug}', [CategoryController::class, 'show'])->name("category.show");
-
+Route::resource('/categories', CategoryController::class);
 
 /**
  * Get All Comments

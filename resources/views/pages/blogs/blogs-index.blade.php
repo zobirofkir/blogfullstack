@@ -11,7 +11,7 @@
                         <div class="p-6">
                             <h2 class="text-xl font-bold mb-2">{{ $blog->title }}</h2>
                             <p class="text-gray-600 mb-4">{{ Str::limit($blog->content, 100) }}</p>
-                            <a href="{{ route('blogs.show', $blog->slug) }}" class="text-blue-500 hover:underline">اقرأ المزيد</a>
+                            <a href="{{ url('/categories', $blog->slug) }}" class="text-blue-500 hover:underline">اقرأ المزيد</a>
                         </div>
                     </div>
                 @endforeach
@@ -32,7 +32,7 @@
             @foreach ($blogs as $latestBlog)
                 <div class="mb-4">
                     <h3 class="text-lg font-bold">{{ Str::limit($latestBlog->title, 20) }}</h3>
-                    <a href="{{route('blogs.show', $latestBlog->slug)}}" class="flex gap-2">
+                    <a href="{{url('/categories', $latestBlog->slug)}}" class="flex gap-2">
                         <p class="text-blue-600">
                             {{$latestBlog->created_at->diffForHumans()}}
                         </p>
