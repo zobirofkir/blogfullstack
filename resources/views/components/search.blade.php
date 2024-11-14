@@ -1,4 +1,4 @@
-<div class="container mx-auto">
+<div class="container mx-auto md:mt-0 mt-[100px]">
     <div class="w-full max-w-md mx-auto p-6">
         <form action="{{ route('search.results') }}" method="GET" class="relative">
             <input

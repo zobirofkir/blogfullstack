@@ -3,7 +3,7 @@
     $currentSlug = request()->segment(2);
 @endphp
 
-<div class="container mx-auto mt-[80px] md:px-0 px-6">
+<div class="container mx-auto mt-[80px] md:px-0 px-6 md:block hidden">
     <div class="flex flex-row gap-4 whitespace-nowrap overflow-x-scroll">
         @foreach ($categories as $category)
             <div>
