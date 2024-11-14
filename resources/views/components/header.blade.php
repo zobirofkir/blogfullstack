@@ -51,13 +51,18 @@
                 </button>
             </div>
         
+            @php
+                $categories = App\Services\Facades\CategoryFacade::get()['categories'];
+            @endphp
+            
             <ul class="flex flex-col gap-8 justify-center items-center py-4 px-8 h-full">
                 <li><a href="/" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">الرئيسية</a></li>
                 <li><a href="/blogs" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">المدونة</a></li>
-                <li><a href="/categories" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">الفئات</a></li>
+                <li><a href="/categories" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">الفئات</a></li>               
                 <li><a href="/teams" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">فريق العمل</a></li>
                 <li><a href="/contacts" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">اتصل بنا</a></li>
             </ul>
+
         </nav>
     </div>
 </div>
