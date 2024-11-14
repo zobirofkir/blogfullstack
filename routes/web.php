@@ -8,6 +8,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsLetterController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
 /**
@@ -68,3 +69,9 @@ Route::post('/newsletter', [NewsLetterController::class, 'store'])->name('newsle
   */
 
  Route::resource('/contacts', ContactController::class);
+
+ /**
+  * Teams Route
+  */
+
+ Route::resource('/teams', TeamController::class);
