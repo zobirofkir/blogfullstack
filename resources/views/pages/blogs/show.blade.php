@@ -6,7 +6,6 @@
                 {{ $blog->title }}
             </h1>
 
-
             @if(!empty($blog->images) && is_array($blog->images))
                 <div class="blog-images mb-4">
                     <div class="image-gallery flex flex-row space-x-4 overflow-x-auto py-2">
@@ -18,7 +17,6 @@
             @else
                 <p>No images available for this blog.</p>
             @endif
-        
 
             <div class="text-sm text-gray-700 mb-2">
                 <span class="font-semibold text-gray-800">By:</span> 
@@ -38,6 +36,30 @@
             </div>
         </div>
 
+        <div class="bg-white py-4 my-10 md:px-0 px-4">
+            <div class="container mx-auto">
+                <div class="max-w-full mx-auto rounded-lg overflow-hidden my-10 ">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-4">Related Articles</h1>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        @foreach ($relatedBlogs as $relatedBlog)
+                        <a href="{{ route('blogs.show', $relatedBlog->slug) }}">
+                            <div class="relative w-full group">
+                                <img
+                                    src="{{ asset('storage/' . $relatedBlog->images[0]) }}"
+                                    alt="Blog Image"
+                                    class="w-full h-64 object-cover rounded-lg border-gray-900 border-2"
+                                />
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
+                                    <h2 class="text-white text-2xl font-semibold">{{ $relatedBlog->title }}</h2>
+                                    <p class="text-white text-sm mt-1">{{ Str::limit($relatedBlog->description, 20) }}</p>
+                                </div>
+                            </div>
+                        </a>
+                        @endforeach
+                    </div>
+                </div>    
+            </div>
+        </div>
 
         <div class="mt-8">
             <h2 class="text-xl font-semibold mb-4">{{ $blog->comments->count() }} Comments</h2>

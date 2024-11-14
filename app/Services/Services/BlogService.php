@@ -23,8 +23,10 @@ class BlogService implements BlogConstructor
     public function show($slug)
     {
         $blogs = Blog::where('slug', $slug)->first();
+        $relatedBlogs = Blog::all();
         return [
-            'blogs' => $blogs
+            'blogs' => $blogs,
+            'relatedBlogs' => $relatedBlogs
         ];
     }
 }
