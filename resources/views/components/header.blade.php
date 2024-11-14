@@ -3,7 +3,7 @@
         <button
             class="block lg:hidden text-gray-700 focus:outline-none"
             id="menu-button"
-            aria-label="تبديل القائمة"
+            aria-label="Toggle menu"
         >
             <svg
                 class="w-8 h-8"
@@ -21,21 +21,21 @@
             </svg>
         </button>
 
-        <nav class="hidden lg:flex w-full mx-auto" id="navbar-menu">
-            <ul class="flex flex-row gap-4">
-                <li><a href="/contacts" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">اتصل بنا</a></li>
-                <li><a href="/teams" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">فريق العمل</a></li>
-                <li><a href="/categories" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">الفئات</a></li>
-                <li><a href="/blogs" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">المدونة</a></li>
-                <li><a href="/" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">الرئيسية</a></li>
-            </ul>
-        </nav>
-
         <div class="md:text-2xl text-lg font-bold">
             <a href="/">
-                <img src="{{ asset('images/icon/icon.png') }}" class="h-[60px] w-[60px]" alt="صورة افتراضية">
+                <img src="{{ asset('images/icon/icon.png') }}" class="h-[60px] w-[60px]" alt="Default Image">
             </a>
         </div>
+
+        <nav class="hidden lg:flex justify-center w-full mx-auto" id="navbar-menu">
+            <ul class="flex flex-row gap-4">
+                <li><a href="/" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Home</a></li>
+                <li><a href="/blogs" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Blog</a></li>
+                <li><a href="/categories" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Categories</a></li>
+                <li><a href="/teams" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Our Team</a></li>
+                <li><a href="/contacts" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Contact Us</a></li>
+            </ul>
+        </nav>
 
         <nav
             class="absolute top-0 left-0 w-full h-full bg-blue-900/90 h-screen shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out lg:hidden"
@@ -56,11 +56,11 @@
             @endphp
             
             <ul class="flex flex-col gap-8 justify-center items-center py-4 px-8 h-full">
-                <li><a href="/" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">الرئيسية</a></li>
-                <li><a href="/blogs" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">المدونة</a></li>
-                <li><a href="/categories" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">الفئات</a></li>               
-                <li><a href="/teams" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">فريق العمل</a></li>
-                <li><a href="/contacts" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">اتصل بنا</a></li>
+                <li><a href="/" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">Home</a></li>
+                <li><a href="/blogs" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">Blog</a></li>
+                <li><a href="/categories" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">Categories</a></li>               
+                <li><a href="/teams" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">Our Team</a></li>
+                <li><a href="/contacts" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">Contact Us</a></li>
             </ul>
 
         </nav>

@@ -1,10 +1,10 @@
 <x-app-layout>
     <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-semibold mb-6">نتائج البحث</h1>
+        <h1 class="text-3xl font-semibold mb-6">Search Results</h1>
 
         @if($blogs->isEmpty())
             <div class="text-gray-500 text-center">
-                <p>لم يتم العثور على مدونات لبحثك.</p>
+                <p>No blogs found for your search.</p>
             </div>
         @else
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -14,7 +14,7 @@
                         <div class="p-6">
                             <h2 class="text-xl font-bold mb-2">{{ $blog->title }}</h2>
                             <p class="text-gray-600 mb-4">{{ Str::limit($blog->content, 100) }}</p>
-                            <a href="{{ route('blogs.show', $blog->slug) }}" class="text-blue-500 hover:underline">اقرأ المزيد</a>
+                            <a href="{{ route('blogs.show', $blog->slug) }}" class="text-blue-500 hover:underline">Read more</a>
                         </div>
                     </div>
                 @endforeach

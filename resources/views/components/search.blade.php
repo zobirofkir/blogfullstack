@@ -4,7 +4,7 @@
             <input
                 type="text"
                 name="title"
-                placeholder="ابحث..."
+                placeholder="Search..."
                 class="w-full p-4 pl-10 pr-4 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 ease-in-out"
             />
             <svg

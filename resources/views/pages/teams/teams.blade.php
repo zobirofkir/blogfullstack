@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-semibold mb-6">فريقنا</h1>
+        <h1 class="text-3xl font-semibold mb-6">Our Team</h1>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             @foreach ($teams as $team)
@@ -12,10 +12,10 @@
                         <p class="text-gray-600 mb-4">{{ Str::limit($team->description, 20) }}</p>
                         <div class="flex space-x-4">
                             @if($team->social_media_one)
-                                <a href="{{ $team->social_media_one }}" target="_blank" class="text-blue-500 hover:underline">لينكد إن</a>
+                                <a href="{{ $team->social_media_one }}" target="_blank" class="text-blue-500 hover:underline">LinkedIn</a>
                             @endif
                             @if($team->social_media_two)
-                                <a href="{{ $team->social_media_two }}" target="_blank" class="text-blue-500 hover:underline">تويتر</a>
+                                <a href="{{ $team->social_media_two }}" target="_blank" class="text-blue-500 hover:underline">Twitter</a>
                             @endif
                         </div>
                     </div>

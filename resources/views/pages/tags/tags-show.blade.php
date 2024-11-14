@@ -27,7 +27,7 @@
                 </div>
             </div>
         @else
-            <p class="text-center text-gray-700">لا توجد مدونات لهذا الوسم بعد.</p>
+            <p class="text-center text-gray-700">No blogs found for this tag yet.</p>
         @endif
     </div>
 </x-app-layout>

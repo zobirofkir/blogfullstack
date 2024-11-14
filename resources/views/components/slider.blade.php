@@ -10,7 +10,7 @@
                             <a href="{{ route('blogs.show', $blog->slug) }}">
                                 <img
                                     src="{{ asset('storage/' . $blog->images[0]) }}"
-                                    alt="صورة"
+                                    alt="Image"
                                     class="object-cover rounded-lg shadow-lg w-full h-full transition-transform duration-300 ease-in-out" 
                                 />
                             </a>

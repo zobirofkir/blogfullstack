@@ -10,16 +10,16 @@
                 <div class="blog-images mb-4">
                     <div class="image-gallery flex flex-row space-x-4 overflow-x-auto py-2">
                         @foreach($blog->images as $image)
-                            <img src="{{ asset('storage/' . $image) }}" alt="صورة المدونة" class="w-auto h-auto rounded-lg shadow-md object-cover">
+                            <img src="{{ asset('storage/' . $image) }}" alt="Blog Image" class="w-auto h-auto rounded-lg shadow-md object-cover">
                         @endforeach
                     </div>
                 </div>
             @else
-                <p>لا توجد صور لهذه المدونة.</p>
+                <p>No images available for this blog.</p>
             @endif
 
             <div class="text-sm text-gray-700 mb-2">
-                <span class="font-semibold text-gray-800">بواسطة:</span> 
+                <span class="font-semibold text-gray-800">By:</span> 
                 {{ $blog->user->name }}
             </div>
 
@@ -31,7 +31,7 @@
 
             @if($tags->isNotEmpty())
             <div class="blogs mt-4">
-                <h3 class="font-semibold text-gray-800">المدونات المتعلقة بهذا الوسم:</h3>
+                <h3 class="font-semibold text-gray-800">Blogs related to this tag:</h3>
                 <ul class="mt-2 flex flex-wrap gap-2">
                     @foreach($tags as $tag)
                         <li>
@@ -43,12 +43,12 @@
                 </ul>
             </div>
         @else
-            <p>لا توجد مدونات لهذا الوسم.</p>
+            <p>No blogs for this tag.</p>
         @endif
 
         <div class="flex flex-col md:flex-row justify-between items-center border-t border-gray-300 pt-4 mt-4">
                 <a href="{{ url('/') }}" class="text-blue-600 hover:underline font-medium mb-2 md:mb-0">
-                    العودة
+                    Go Back
                 </a>
             </div>
         </div>
@@ -56,14 +56,14 @@
         <div class="bg-white py-4 my-10 md:px-0 px-4">
             <div class="container mx-auto">
                 <div class="max-w-full mx-auto rounded-lg overflow-hidden my-10 ">
-                    <h1 class="text-3xl font-bold text-gray-900 mb-4">مقالات ذات صلة</h1>
+                    <h1 class="text-3xl font-bold text-gray-900 mb-4">Related Articles</h1>
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         @foreach ($relatedBlogs as $relatedBlog)
                         <a href="{{ route('blogs.show', $relatedBlog->slug) }}">
                             <div class="relative w-full group">
                                 <img
                                     src="{{ asset('storage/' . $relatedBlog->images[0]) }}"
-                                    alt="صورة المدونة"
+                                    alt="Blog Image"
                                     class="w-full h-64 object-cover rounded-lg border-gray-900 border-2"
                                 />
                                 <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
@@ -79,23 +79,23 @@
         </div>
 
         <div class="mt-8">
-            <h2 class="text-xl font-semibold mb-4">{{ $blog->comments->count() }} تعليق</h2>
+            <h2 class="text-xl font-semibold mb-4">{{ $blog->comments->count() }} Comments</h2>
 
             <form method="POST" action="{{ url('/comments') }}" class="mt-6 mb-10">
                 @csrf
                 <input type="hidden" name="blog_id" value="{{ $blog->id }}">
 
                 <div class="mb-4">
-                    <input type="text" name="name" class="w-full border border-gray-300 rounded-lg p-2" placeholder="اسمك" required>
+                    <input type="text" name="name" class="w-full border border-gray-300 rounded-lg p-2" placeholder="Your Name" required>
                 </div>
                 <div class="mb-4">
-                    <input type="email" name="email" class="w-full border border-gray-300 rounded-lg p-2" placeholder="بريدك الإلكتروني" required>
+                    <input type="email" name="email" class="w-full border border-gray-300 rounded-lg p-2" placeholder="Your Email" required>
                 </div>
                 <div class="mb-4">
-                    <textarea name="comment" rows="4" class="w-full border border-gray-300 rounded-lg p-2" placeholder="أضف تعليقك هنا..." required></textarea>
+                    <textarea name="comment" rows="4" class="w-full border border-gray-300 rounded-lg p-2" placeholder="Add your comment here..." required></textarea>
                 </div>
                 <button type="submit" class="mt-2 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
-                    إرسال
+                    Submit
                 </button>
             </form>
 
