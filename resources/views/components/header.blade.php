@@ -33,7 +33,7 @@
 
         <div class="md:text-2xl text-lg font-bold">
             <a href="/">
-                <img src="{{ asset('images/icon/icon.png') }}" class="h-auto w-[150px]" alt="صورة افتراضية">
+                <img src="{{ asset('images/icon/icon.png') }}" class="h-[60px] w-[60px]" alt="صورة افتراضية">
             </a>
         </div>
 
