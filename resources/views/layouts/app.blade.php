@@ -8,7 +8,7 @@
         <link rel="icon" href="{{ asset('images/icon/icon.png') }}">
         
         <meta name="description" content="Welcome to {{ config('app.name') }} - A blog sharing insightful articles, tutorials, and news on technology, programming, and web development.">
-        <meta name="author" content="Your Name or Company">
+        <meta name="author" content="{{ config('app.name') }}">
         <meta name="keywords" content="blog, programming, technology, tutorials, web development, articles, coding, development, Laravel, JavaScript, PHP">
         
         <meta property="og:title" content="{{ config('app.name') }}">
