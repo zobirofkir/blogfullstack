@@ -6,9 +6,9 @@
     </div>
 
     <div class="container mx-auto px-4 py-8 flex flex-col lg:flex-row">
-        <!-- Main Content -->
+        <!-- المحتوى الرئيسي -->
         <div class="w-full lg:w-3/4 lg:pr-8">
-            <h2 class="text-2xl font-semibold mb-6">Blogs in this Category</h2>
+            <h2 class="text-2xl font-semibold mb-6">المدونات في هذه الفئة</h2>
             @if ($category->blogs->isNotEmpty())
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     @foreach ($category->blogs as $blog)
@@ -17,13 +17,13 @@
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">{{ $blog->title }}</h3>
                                 <p class="text-gray-600 mb-4">{{ Str::limit($blog->content, 100) }}</p>
-                                <a href="{{ route('blogs.show', $blog->slug) }}" class="text-blue-500 hover:underline">Read more</a>
+                                <a href="{{ route('blogs.show', $blog->slug) }}" class="text-blue-500 hover:underline">اقرأ المزيد</a>
                             </div>
                         </div>
                     @endforeach
                 </div>
             @else
-                <p class="text-gray-500">No blogs found in this category.</p>
+                <p class="text-gray-500">لا توجد مدونات في هذه الفئة.</p>
             @endif
 
             <div class="mt-8">
@@ -35,9 +35,9 @@
             </div>
         </div>
 
-        <!-- Sidebar: Latest Blogs -->
+        <!-- الشريط الجانبي: المدونات الأخيرة -->
         <div class="w-full lg:w-1/4 bg-gray-100 p-6 rounded-lg shadow-lg mt-8 lg:mt-0">
-            <h2 class="text-2xl font-semibold mb-4">Recent Blogs</h2>
+            <h2 class="text-2xl font-semibold mb-4">المدونات الأخيرة</h2>
             @foreach ($blogs as $latestBlog)
                 <div class="mb-4">
                     <h3 class="text-lg font-bold">{{ $latestBlog->title }}</h3>
