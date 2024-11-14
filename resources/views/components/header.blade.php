@@ -6,7 +6,7 @@
             aria-label="تبديل القائمة"
         >
             <svg
-                class="w-6 h-6"
+                class="w-8 h-8"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -39,15 +39,26 @@
         </div>
 
         <nav
-            class="absolute top-16 left-0 w-full bg-white shadow-lg hidden transform transition-transform duration-300 ease-in-out lg:hidden mt-5"
+            class="absolute top-0 left-0 w-full h-full bg-blue-900/90 h-screen shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out lg:hidden"
             id="mobile-menu"
         >
-            <ul class="flex flex-col gap-8 justify-center items-center py-4 px-8">
-                <li><a href="/" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase shadow-lg px-4 py-2 rounded-full">الرئيسية</a></li>
-                <li><a href="/blogs" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase shadow-lg px-4 py-2 rounded-full">المدونة</a></li>
-                <li><a href="/categories" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase shadow-lg px-4 py-2 rounded-full">الفئات</a></li>
-                <li><a href="/teams" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase shadow-lg px-4 py-2 rounded-full">فريق العمل</a></li>
-                <li><a href="/contacts" class="text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase shadow-lg px-4 py-2 rounded-full">اتصل بنا</a></li>
+            <div class="flex justify-between items-center px-8 py-4">
+
+                <button
+                    id="close-menu"
+                    class="text-white text-4xl font-bold"
+                    aria-label="Close Menu"
+                >
+                    &times;
+                </button>
+            </div>
+        
+            <ul class="flex flex-col gap-8 justify-center items-center py-4 px-8 h-full">
+                <li><a href="/" class="text-white hover:text-blue-300 transition font-bold text-xl uppercase shadow-lg px-4 py-2 rounded-full">الرئيسية</a></li>
+                <li><a href="/blogs" class="text-white hover:text-blue-300 transition font-bold text-xl uppercase shadow-lg px-4 py-2 rounded-full">المدونة</a></li>
+                <li><a href="/categories" class="text-white hover:text-blue-300 transition font-bold text-xl uppercase shadow-lg px-4 py-2 rounded-full">الفئات</a></li>
+                <li><a href="/teams" class="text-white hover:text-blue-300 transition font-bold text-xl uppercase shadow-lg px-4 py-2 rounded-full">فريق العمل</a></li>
+                <li><a href="/contacts" class="text-white hover:text-blue-300 transition font-bold text-xl uppercase shadow-lg px-4 py-2 rounded-full">اتصل بنا</a></li>
             </ul>
         </nav>
     </div>
