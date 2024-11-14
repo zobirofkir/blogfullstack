@@ -10,7 +10,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = CategoryFacade::get()['categories'];
-        return view('pages.categories.index', compact('categories'));
+        return view('pages.categories.categories-index', compact('categories'));
     }
 
     public function show($slug)
@@ -19,6 +19,6 @@ class CategoryController extends Controller
 
         $blogs = CategoryFacade::show($slug)['blogs'];
         
-        return view('pages.categories.show', compact('category','blogs'));
+        return view('pages.categories.categories-show', compact('category','blogs'));
     }
 }
