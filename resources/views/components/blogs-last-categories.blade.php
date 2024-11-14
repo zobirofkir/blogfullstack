@@ -1,6 +1,6 @@
 @foreach ($blogs->take(1) as $blog)
     <div class="bg-gray-900">
-        <div class="flex container mx-auto md:p-10 flex-col">
+        <div class="flex container mx-auto md:p-10 flex-col md:px-0 px-4">
             <div class="flex font-black text-white text-2xl sticky z-30 p-2 bg-gray-900">
                 {{$blog->title}}
             </div>
