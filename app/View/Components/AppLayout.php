@@ -15,7 +15,7 @@ class AppLayout extends Component
      */
     public function __construct( string $title = "" )
     {
-        $this->title = $title;
+        $this->title = $title ?: config('app.name');
     }
 
     /**
