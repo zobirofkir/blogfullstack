@@ -22,18 +22,18 @@
         </button>
 
         <div class="md:text-2xl text-lg font-bold">
-            <a href="/">
+            <a href="{{url('/')}}">
                 <img src="{{ asset('images/icon/icon.png') }}" class="h-[60px] w-[60px]" alt="Default Image">
             </a>
         </div>
 
         <nav class="hidden lg:flex justify-center w-full mx-auto" id="navbar-menu">
             <ul class="flex flex-row gap-4">
-                <li><a href="/" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Home</a></li>
-                <li><a href="/blogs" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Blog</a></li>
-                <li><a href="/categories" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Categories</a></li>
-                <li><a href="/teams" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Our Team</a></li>
-                <li><a href="/contacts" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Contact Us</a></li>
+                <li><a href="{{url('/')}}" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Home</a></li>
+                <li><a href="{{url('/blogs')}}" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Blog</a></li>
+                <li><a href="{{url('/categories')}}" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Categories</a></li>
+                <li><a href="{{url('/teams')}}" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Our Team</a></li>
+                <li><a href="{{url('/contacts')}}" class="nav-link text-gray-700 hover:text-blue-500 transition font-bold text-md uppercase">Contact Us</a></li>
             </ul>
         </nav>
 
@@ -57,10 +57,10 @@
             
             <ul class="flex flex-col gap-8 justify-center items-center py-4 px-8 h-full">
                 <li><a href="/" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">Home</a></li>
-                <li><a href="/blogs" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">Blog</a></li>
-                <li><a href="/categories" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">Categories</a></li>               
-                <li><a href="/teams" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">Our Team</a></li>
-                <li><a href="/contacts" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">Contact Us</a></li>
+                <li><a href="{{url('/blogs')}}" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">Blog</a></li>
+                <li><a href="{{url('/categories')}}" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">Categories</a></li>               
+                <li><a href="{{url('/teams')}}" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">Our Team</a></li>
+                <li><a href="{{url('/contacts')}}" class="nav-link text-white hover:text-blue-300 transition font-bold text-xl uppercase px-4 py-2 rounded-full">Contact Us</a></li>
             </ul>
 
         </nav>
